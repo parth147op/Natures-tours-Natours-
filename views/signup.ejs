@@ -1,0 +1,51 @@
+<%-include('header')%>
+  <main class="main">
+    <div class="login-form">
+        <h2 class="heading-secondary ma-bt-log">Log into your account</h2>
+        <form class="form form--login">
+        <div class="form__group">
+            <label for="email" class="form__label">Email address</label>
+            <input type="email" placeholder="you@example.com" id="email" name="email" class="form__input" required>
+        </div>
+        <div class="form__group ma-bt-md">
+            <label for="passsword" class="form__label">Password</label>
+            <input type="password" placeholder="••••••••" id="password" name="password" class="form__input" required>
+        </div>
+        <div class="form__group">
+            <button class="btn btn--green" >Login</button>
+        </div>
+        </form>
+    </div>
+  </main> 
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+      const login = async(email,password)=>{
+          try{
+            console.log(email,password);
+            const res = await axios({
+              method:'POST',
+              url:'http://localhost:3000/api/v1/users/login',
+              data:{
+                  email,
+                  password
+              }
+          })
+          console.log(res);
+          if(res.data.status=='success'){
+            location.assign('/');
+          }
+          }catch(err){
+              //console.log(err.response.data.message);
+              alert(err.response.data.message);
+          }
+      }
+      document.querySelector('.form').addEventListener('submit',e=>{
+          e.preventDefault();
+          const email = document.getElementById('email').value;
+          const password = document.getElementById('password').value;
+          login(email,password);
+      })
+  </script>  
+ 
+<%-include('footer')%>

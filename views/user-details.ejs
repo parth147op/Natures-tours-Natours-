@@ -1,0 +1,209 @@
+<%-include('header')%>
+<main class="main">
+    <div class="user-view">
+        <nav class="user-view__menu">
+            <ul class="side-nav">
+                <li class="side-nav">
+                    <a href="#">
+                        <svg>
+                            <use xlink:href='img/icons.svg#icon-settings'></use>
+                        </svg>
+                        | Settings
+                    </a>
+                </li>
+                <li class="side-nav">
+                    <a href="#">
+                        <svg>
+                            <use xlink:href='img/icons.svg#icon-briefcase'></use>
+                        </svg>
+                        | My bookings
+                    </a>
+                </li>
+                <li class="side-nav">
+                    <a href="#">
+                        <svg>
+                            <use xlink:href='img/icons.svg#icon-star'></use>
+                        </svg>
+                        | My reviews
+                    </a>
+                </li>
+                <li class="side-nav">
+                    <a href="#">
+                        <svg>
+                            <use xlink:href='img/icons.svg#icon-credit-card'></use>
+                        </svg>
+                        | Billing
+                    </a>
+                </li>
+            </ul>
+            <div class="admin-nav">
+                <h5 class="admin-nav__heading">Admin</h5>
+                <ul class="side-nav">
+                    <li class="side-nav">
+                        <a href="#">
+                            <svg>
+                                <use xlink:href='img/icons.svg#icon-map'></use>
+                            </svg>
+                            | Manage tours
+                        </a>
+                    </li>
+                    <li class="side-nav">
+                        <a href="#">
+                            <svg>
+                                <use xlink:href='img/icons.svg#icon-users'></use>
+                            </svg>
+                            | Manage users
+                        </a>
+                    </li>
+                    <li class="side-nav">
+                        <a href="#">
+                            <svg>
+                                <use xlink:href='img/icons.svg#icon-star'></use>
+                            </svg>
+                            | Manage reviews
+                        </a>
+                    </li>
+                    <li class="side-nav">
+                        <a href="#">
+                            <svg>
+                                <use xlink:href='img/icons.svg#icon-briefcase'></use>
+                            </svg>
+                            | Manage reviews
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="user-view__content">
+            <div class="user-view__form-container">
+                <h2 class="heading-secondary ma-bt-md">Your account setting</h2>
+                <form class="form form-user-data" id="form-user-data">
+                    <div class="form__group">
+                        <label for="name" class="form__label">Name</label>
+                        <input type="text" value=<%=user.name%> required id="name" class="form__input">
+                    </div>
+                    <div class="form__group ma-bt-md">
+                        <label for="email" class="form__label">Email address</label>
+                        <input type="email" value=<%=user.email%> required id="email" class="form__input">
+                    </div>
+                    <div class="form__group form__photo-upload">
+                        <img src="img/users/<%=user.photo%>" alt="User photo" class="form__user-photo">
+                        <input type="file" id="photo" name="photo" 
+                        accept="image/*"
+                        >
+                    </div>
+                    <div class="form__group right">
+                        <button class="btn btn--small btn--green">Save settings</button>
+                    </div>
+                </form>
+                <!-- <form class="photo__upload">
+                    <div class="form__group form__photo-upload">
+                        <img src="img/users/<%=user.photo%>" alt="User photo" class="form__user-photo">
+                        <input type="file" id="photo" name="photo" 
+                        accept="image/*"
+                        >
+                    </div>
+                    <div class="form__group right">
+                        <button class="btn btn--small btn--green">Update Photo</button>
+                    </div>
+                </form> -->
+            </div>
+            <div class="line"> &nbsp;</div>
+            <div class="user-view__form-container">
+                <h2 class="heading-secondary ma-bt-md">Password change</h2>
+                <form class="form form-user-settings">
+                    <div class="form__group">
+                        <label for="password-current" class="form__label">Current password</label>
+                        <input type="password" placeholder="••••••••" required  id="password-current" minlength="8"  class="form__input">
+                    </div>
+                    <div class="form__group">
+                        <label for="password" class="form__label">New password</label>
+                        <input type="password" placeholder="••••••••" required minlength="8" id="password" class="form__input">
+                    </div>
+                    <div class="form__group ma-bt-lg">
+                        <label for="password-confirm" class="form__label">Confirm password</label>
+                        <input type="password" id="password-confirm" placeholder='••••••••' required  minlength='8' class="form__input">
+                    </div>
+                    <div class="form__group right">
+                        <button class="btn btn--small btn--green">Save password</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+ <script>
+    //  const updatePhoto = async(data)=>{
+    //     try{
+    //         console.log(data);
+    //         const res = await axios({
+    //             method:'PATCH',
+    //             url:'http://localhost:3000/api/v1/users/user/me',
+    //             data
+    //         })
+    //         if(res.data.status=='success'){
+    //             alert('Photo Changed Successfully!!!!');
+    //             location.assign('/me');
+    //         }
+    //      }catch(err){
+    //          alert(err);
+    //      }
+    //  }
+    //  document.querySelector('.photo__upload').addEventListener('submit',e=>{
+    //      e.preventDefault();
+    //      const photo = document.getElementById('photo').files[0];
+    //      updatePhoto(photo,'data');
+    //  });
+     const updatedetails = async(data)=>{
+         console.log(data);
+         try{
+            const res = await axios({
+                method:'PATCH',
+                url:'http://localhost:3000/api/v1/users/user/me',
+                data
+            })
+            if(res.data.status=='success'){
+                alert('Users/Email changed Successfully!!!');
+                location.assign('/me');
+            }
+         }catch(err){
+             alert(err);
+         }
+     }
+     document.querySelector('.form.form-user-data').addEventListener('submit',e=>{
+        e.preventDefault(); 
+         const form = new FormData();
+         form.append('name',document.getElementById('name').value);
+         form.append('email',document.getElementById('email').value);
+         form.append('photo',document.getElementById('photo').files[0]);
+         console.log(form);
+         updatedetails(form,'data');
+     })
+
+     const updatePassword = async(data)=>{
+         try{
+            const res = await axios({
+                method:'PATCH',
+                url:'http://localhost:3000/api/v1/users/user/updateMyPassword',
+                data
+            })
+            if(res.data.status=='success'){
+                alert('Password Changed Successfully');
+                location.assign('/me');
+            }
+         }catch(err){
+             alert(err.response.data.message);
+         }
+     }  
+     document.querySelector('.form.form-user-settings').addEventListener('submit',e=>{
+         e.preventDefault();
+         const passwordCurrent = document.getElementById('password-current').value;
+         const password = document.getElementById('password').value;
+         const passwordConfirm = document.getElementById('password-confirm').value;
+         updatePassword({passwordCurrent,password,passwordConfirm},'data');
+     })
+ </script>
+<%-include('footer')%>
+

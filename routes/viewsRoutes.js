@@ -1,0 +1,11 @@
+const express = require('express');
+const viewsControllers = require('../controllers/viewsControllers');
+const authController = require('../controllers/auth');
+const router = express.Router();
+router.use(authController.isLoggedin);
+router.get('/',viewsControllers.getOverview);
+router.get('/tours/:id',viewsControllers.getTour);
+router.get('/login',viewsControllers.getLogin);
+router.get('/signup',viewsControllers.getSignup);
+router.get('/me',viewsControllers.getUserDetails);
+module.exports = router;

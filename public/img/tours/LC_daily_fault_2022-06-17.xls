@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Manual Lease Circuit fault booking summary</title>
+<link rel=Stylesheet type=text/css href=lc_mystyle_fault.css?version=66 media=screen>
+<!--[if lt IE 9]>
+  <script src=https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js></script>
+<![endif]-->
+<!---Version53 is imp for css updation in php file---->
+<script type=text/javascript>
+document.createElement('header');
+document.createElement('footer');
+document.createElement('nav');
+document.createElement('article');
+document.createElement('hgroup');
+</script>
+</head>
+<body>
+<h2 style="margin-top:0px;margin-bottom:0px;">LC pending Fault </h2>
+Lease circuit fault status @17-06-2022 10:57 PM<br><br>AGM_Rural - 22<br>AGM_Ur-I - 4<br>AGM_Ur-II - 3<br><br><table border=1px>
+		<tr style="background-color:lightblue;"><th>SL</th><th>Book_Time</th><th>Customer Name</th><th>Customer Address</th><th>Media</th><th>Trans</th><th>SDO</th><th>BW</th><th>Made Over</th><th>Pending Days</th><th>Reason of Fault</th></tr>
+		<tr>	<td>1</td>
+					<td>2022-03-22 06:36</td>
+					<td>State Bank of India .</td>
+					<td>State Bank of India Golana Branch (3343) P O Golan</td>
+					<td>COPPER</td>
+					<td style="background-color:#bbb;"></td>
+					<td>SDO_CMB_TPR</td>
+					<td>2 MBPS</td>
+					<td>Amar Tripathi</td>
+					<td style="text-align:center;background-color:#bbb;">88 </td>
+					<td>Golana OF Fault</td>					
+				</tr>
+			<tr>	<td>2</td>
+					<td>2022-05-07 10:30</td>
+					<td>Bank of Baroda Bank</td>
+					<td>BANK OF BARODA FAGVEL BRANCH PO FAGVEL,,TALUKA- KA</td>
+					<td>COPPER</td>
+					<td style="background-color:#bbb;"></td>
+					<td>SDO_KPJ</td>
+					<td>2 MBPS</td>
+					<td>Dilip JTO Trans/ Anuj</td>
+					<td style="text-align:center;background-color:#bbb;">42 </td>
+					<td>SSA OFC Fault</td>					
+				</tr>
+			<tr>	<td>3</td>
+					<td>2022-05-09 11:00</td>
+					<td>Dena Bank .</td>
+					<td>DENA BANK SANDESAR BRANCH SANDESAR TAL ANAND DIST </td>
+					<td>COPPER</td>
+					<td style="background-color:#bbb;"></td>
+					<td>SDOT_SARSA</td>
+					<td>2 MBPS</td>
+					<td>Ajit Pandey</td>
+					<td style="text-align:center;background-color:#bbb;">40 </td>
+					<td>Line fault to be upgraded on OFC Joint visit require</td>					
+				</tr>
+			<tr>	<td>4</td>
+					<td>2022-05-11 12:10</td>
+					<td>Bank of Baroda Mumbai IT DEPAR</td>
+					<td>BANK OF BARODA RASNOL BRANCH RASNOL,Anand NADIAD,N</td>
+					<td>RF-LINK</td>
+					<td style="background-color:#bbb;"></td>
+					<td>SDOT_SARSA</td>
+					<td>2 MBPS</td>
+					<td>Ajit Pandey</td>
+					<td style="text-align:center;background-color:#bbb;">38 </td>
+					<td>RF Issue CE /vendor problem</td>					
+				</tr>
+			<tr>	<td>5</td>
+					<td>2022-05-13 10:00</td>
+					<td>AGM(IT), Bank of India, Bank o</td>
+					<td>WANGHROLI Branch PATEL FALIA TAL THASRA WA NGH GJ </td>
+					<td>COPPER</td>
+					<td style="background-color:#bbb;"></td>
+					<td>SDOT_DKR_UMR</td>
+					<td>2 MBPS</td>
+					<td>lomesh Panchal</td>
+					<td style="text-align:center;background-color:#bbb;">36 </td>
+					<td>Local SSA OFC break</td>					
+				</tr>
+			<tr>	<td>6</td>
+					<td>2022-05-18 09:45</td>
+					<td>M/S BANK OF BARODA, SUN TOWER,</td>
+					<td>Bank of Baroda Rudel Branch Palidar Samajwadi At a</td>
+					<td>COPPER</td>
+					<td style="background-color:#bbb;"></td>
+					<td>SDO_BORSAD</td>
+					<td>2 MBPS</td>
+					<td>Ashutosh Ranjan</td>
+					<td style="text-align:center;background-color:#bbb;">31 </td>
+					<td>Local SSA OFC break</td>					
+				</tr>
+			<tr>	<td>7</td>
+					<td>2022-05-18 10:00</td>
+					<td>AGM(IT), Bank of India, Bank o</td>
+					<td>BOCHASAN Branch BAZAR BOCHASAN BOCHA GJ 3881 40 SO</td>
+					<td>COPPER</td>
+					<td style="background-color:#bbb;"></td>
+					<td>SDO_BORSAD</td>
+					<td>2 MBPS</td>
+					<td>Ashutosh Ranjan</td>
+					<td style="text-align:center;background-color:#bbb;">31 </td>
+					<td>Local SSA OFC break</td>					
+				</tr>
+			<tr>	<td>8</td>
+					<td>2022-05-19 09:00</td>
+					<td>Central Bank of India .</td>
+					<td>Central Bank of India Br. Code 528 Br. Loc DAVOL C</td>
+					<td>COPPER</td>
+					<td style="background-color:#bbb;"></td>
+					<td>SDO_BORSAD</td>
+					<td>2 MBPS</td>
+					<td>Mahera Sir</td>
+					<td style="text-align:center;background-color:#bbb;">30 </td>
+					<td>Local SSA OFC break</td>					
+				</tr>
+			<tr>	<td>9</td>
+					<td>2022-05-31 10:00</td>
+					<td>USOF WI FI PROJECT AGM NWO CFA</td>
+					<td>PAMOL TEL EXCH USOF WIFI PART 2 PAMOL,Anand NADIAD</td>
+					<td>OFC</td>
+					<td style="background-color:#bbb;">Trans_AND</td>
+					<td>SDO_BORSAD</td>
+					<td>2 MBPS</td>
+					<td>Ashutosh Ranjan</td>
+					<td style="text-align:center;background-color:#bbb;">18 </td>
+					<td>Local SSA OFC break</td>					
+				</tr>
+			<tr>	<td>10</td>
+					<td>2022-06-02 01:47</td>
+					<td>Union Bank of India #</td>
+					<td>UNION BANK OF INIDA LINGDA BRANCH NEAR GRAMPANCHAY</td>
+					<td>COPPER</td>
+					<td style="background-color:#bbb;"></td>
+					<td>SDOT_DKR_UMR</td>
+					<td>2 MBPS</td>
+					<td>lomesh Panchal</td>
+					<td style="text-align:center;background-color:#bbb;">16 </td>
+					<td>UG CABLE break</td>					
+				</tr>
+			<tr>	<td>11</td>
+					<td>2022-06-03 03:30</td>
+					<td>M/S BANK OF BARODA, SUN TOWER,</td>
+					<td>BANK OF BARODA VANODA BR CO PANKAJ C PATEL VANODA </td>
+					<td>COPPER</td>
+					<td style="background-color:#bbb;"></td>
+					<td>SDOT_MBD</td>
+					<td>2 MBPS</td>
+					<td>lomesh Panchal</td>
+					<td style="text-align:center;background-color:#bbb;">15 </td>
+					<td>lossy Fiber</td>					
+				</tr>
+			<tr>	<td>12</td>
+					<td>2022-06-07 22:00</td>
+					<td>DIRECTOR PMU DEPARTMENT OF POS</td>
+					<td>GUJT0475 ClassC Tarapur S.O--388180 Tarapur S.ODha</td>
+					<td>COPPER</td>
+					<td style="background-color:#bbb;"></td>
+					<td>SDO_CMB_TPR</td>
+					<td>512 KBPS</td>
+					<td>Amar Tripathi</td>
+					<td style="text-align:center;background-color:#bbb;">11 </td>
+					<td>Local SSA OFC/System break</td>					
+				</tr>
+			<tr>	<td>13</td>
+					<td>2022-06-13 03:33</td>
+					<td>Bank of Baroda Bank</td>
+					<td>BANK OF BARODA VADTHAL BRANCH GRAM PANCHAYAT BUILD</td>
+					<td>OFC</td>
+					<td style="background-color:#bbb;">Trans_NAD</td>
+					<td>SDOT_NADIAD</td>
+					<td>2 MBPS</td>
+					<td>Dipen Vasava</td>
+					<td style="text-align:center;background-color:#bbb;">5 </td>
+					<td>Feedback from field is awaited</td>					
+				</tr>
+			<tr>	<td>14</td>
+					<td>2022-06-13 12:54</td>
+					<td>AGM(IT), Bank of India, Bank o</td>
+					<td>BAMANGAM Branch MOTI KHADKI BAMANGAM TA BOR SAD DT</td>
+					<td>COPPER</td>
+					<td style="background-color:#bbb;"></td>
+					<td>SDO_BORSAD</td>
+					<td>2 MBPS</td>
+					<td>Dilip Pandey</td>
+					<td style="text-align:center;background-color:#bbb;">5 </td>
+					<td>Exch Power plant fault</td>					
+				</tr>
+			<tr>	<td>15</td>
+					<td>2022-06-14 11:29</td>
+					<td>M/S BANK OF BARODA, SUN TOWER,</td>
+					<td>ANTISAR TA KAPADWANJ DIST KHEDA MNS W/o Router,1 N</td>
+					<td>COPPER</td>
+					<td style="background-color:#bbb;"></td>
+					<td>SDO_KPJ</td>
+					<td>2 MBPS</td>
+					<td>Mayur Varsat</td>
+					<td style="text-align:center;background-color:#bbb;">4 </td>
+					<td>Feedback from field is awaited</td>					
+				</tr>
+			<tr>	<td>16</td>
+					<td>2022-06-14 11:30</td>
+					<td>UNION BANK OF INDIA (ECB) ERST</td>
+					<td>MAIN ROAD AT PO SUNDAN SUNDAN VASAD,SUNDAN,VASAD,A</td>
+					<td>COPPER</td>
+					<td style="background-color:#bbb;"></td>
+					<td>SDOT_SARSA</td>
+					<td>2 MBPS</td>
+					<td>Ajit Pandey</td>
+					<td style="text-align:center;background-color:#bbb;">4 </td>
+					<td>Line Fault</td>					
+				</tr>
+			<tr>	<td>17</td>
+					<td>2022-06-14 11:30</td>
+					<td>M/S BANK OF BARODA, SUN TOWER,</td>
+					<td>Bank of Baroda KOYDAM Branch KOYDAM TAL VIRPUR DIS</td>
+					<td>COPPER</td>
+					<td style="background-color:#bbb;"></td>
+					<td>SDOT_BNOVIR</td>
+					<td>2 MBPS</td>
+					<td>A B Rana</td>
+					<td style="text-align:center;background-color:#bbb;">4 </td>
+					<td>Line Fault</td>					
+				</tr>
+			<tr>	<td>18</td>
+					<td>2022-06-14 11:30</td>
+					<td>Central Bank of India .</td>
+					<td>Central Bank of India Br. Code 520 Br. Loc PETLAD </td>
+					<td>COPPER</td>
+					<td style="background-color:#bbb;"></td>
+					<td>SDO_PETLAD</td>
+					<td>2 MBPS</td>
+					<td>Ashwin Vaghela</td>
+					<td style="text-align:center;background-color:#bbb;">4 </td>
+					<td>Line Fault</td>					
+				</tr>
+			<tr>	<td>19</td>
+					<td>2022-06-14 11:30</td>
+					<td>Central Bank of India .</td>
+					<td>Central Bank Of India Br. Code Br. Loc BORSAD CBI </td>
+					<td>COPPER</td>
+					<td style="background-color:#bbb;"></td>
+					<td>SDO_BORSAD</td>
+					<td>2 MBPS</td>
+					<td>D G PAndey</td>
+					<td style="text-align:center;background-color:#bbb;">4 </td>
+					<td>Feedback from field is awaited</td>					
+				</tr>
+			<tr>	<td>20</td>
+					<td>2022-06-14 12:00</td>
+					<td>M/S BANK OF BARODA, SUN TOWER,</td>
+					<td>Bank of Baroda DABHAN Branch NEAR SWAMINARAYAN TEM</td>
+					<td>COPPER</td>
+					<td style="background-color:#bbb;"></td>
+					<td>SDOT_NADIAD</td>
+					<td>2 MBPS</td>
+					<td>Dipen Vasava</td>
+					<td style="text-align:center;background-color:#bbb;">4 </td>
+					<td>Feedback from field is awaited</td>					
+				</tr>
+			<tr>	<td>21</td>
+					<td>2022-06-14 12:00</td>
+					<td>M/S BANK OF BARODA, SUN TOWER,</td>
+					<td>Bank of Baroda NAYAKA Branch NAYAKA TAL MATAR DIST</td>
+					<td>COPPER</td>
+					<td style="background-color:#bbb;"></td>
+					<td>SDOT_MBD</td>
+					<td>2 MBPS</td>
+					<td>Nilay</td>
+					<td style="text-align:center;background-color:#bbb;">4 </td>
+					<td>CE Cable Removed</td>					
+				</tr>
+			<tr>	<td>22</td>
+					<td>2022-06-14 12:00</td>
+					<td>AGM(IT), Bank of India, Bank o</td>
+					<td>SAMARKHA Branch BAZAR NULL SAMAR GJ 388360 S OLID </td>
+					<td>COPPER</td>
+					<td style="background-color:#bbb;"></td>
+					<td>SDOP_ANAND</td>
+					<td>2 MBPS</td>
+					<td>Anil Makwana</td>
+					<td style="text-align:center;background-color:#bbb;">4 </td>
+					<td>Bank Premises Issue</td>					
+				</tr>
+			<tr>	<td>23</td>
+					<td>2022-06-14 12:00</td>
+					<td>UNION BANK OF INDIA (ECB) ERST</td>
+					<td>1277 MAIN ROAD NEAR BUS STAND SAJIPUR-RAS ROAD,Bor</td>
+					<td>COPPER</td>
+					<td style="background-color:#bbb;"></td>
+					<td>SDO_BORSAD</td>
+					<td>2 MBPS</td>
+					<td>D G PAndey</td>
+					<td style="text-align:center;background-color:#bbb;">4 </td>
+					<td>Feedback from field is awaited</td>					
+				</tr>
+			<tr>	<td>24</td>
+					<td>2022-06-14 13:15</td>
+					<td>AGM(IT), Bank of India, Bank o</td>
+					<td>Bank Of India Chhipdi Branch At Post Chhipdi Tal K</td>
+					<td>COPPER</td>
+					<td style="background-color:#bbb;"></td>
+					<td>SDO_KPJ</td>
+					<td>2 MBPS</td>
+					<td>Mayur Varsat</td>
+					<td style="text-align:center;background-color:#bbb;">4 </td>
+					<td>Line Fault</td>					
+				</tr>
+			<tr>	<td>25</td>
+					<td>2022-06-14 14:20</td>
+					<td>M/S BANK OF BARODA, SUN TOWER,</td>
+					<td>Bank of Baroda JETHOLI Branch JETHOLI TAL BALASINO</td>
+					<td>COPPER</td>
+					<td style="background-color:#bbb;"></td>
+					<td>SDOT_BNOVIR</td>
+					<td>2 MBPS</td>
+					<td>A B Rana</td>
+					<td style="text-align:center;background-color:#bbb;">4 </td>
+					<td>Feedback from field is awaited</td>					
+				</tr>
+			<tr>	<td>26</td>
+					<td>2022-06-14 15:00</td>
+					<td>M/S BANK OF BARODA, SUN TOWER,</td>
+					<td>Bank of Baroda VADAD Branch VADAD TAL THASRA DIST </td>
+					<td>COPPER</td>
+					<td style="background-color:#bbb;"></td>
+					<td>SDOT_DKR_UMR</td>
+					<td>2 MBPS</td>
+					<td>lomesh Panchal</td>
+					<td style="text-align:center;background-color:#bbb;">4 </td>
+					<td>Local SSA OFC break</td>					
+				</tr>
+			<tr>	<td>27</td>
+					<td>2022-06-14 15:30</td>
+					<td>State Bank of India .</td>
+					<td>State Bank of India Siswa V. B. Branch (5720) P Oi</td>
+					<td>COPPER</td>
+					<td style="background-color:#bbb;"></td>
+					<td>SDO_BORSAD</td>
+					<td>2 MBPS</td>
+					<td>D G PAndey</td>
+					<td style="text-align:center;background-color:#bbb;">4 </td>
+					<td>Feedback from field is awaited</td>					
+				</tr>
+			<tr>	<td>28</td>
+					<td>2022-06-17 10:51</td>
+					<td>STATE BANK OF INDIA</td>
+					<td>SBI SME V U NAGAR BR 63752 JANTA CHOWKDI ANAND SOJ</td>
+					<td>OFC</td>
+					<td style="background-color:#bbb;">Trans_AND</td>
+					<td>SDOP_VVN</td>
+					<td>4 MBPS</td>
+					<td>AGM TX Anand</td>
+					<td style="text-align:center;background-color:#bbb;">1 </td>
+					<td>OFC</td>					
+				</tr>
+			<tr>	<td>29</td>
+					<td>2022-06-17 15:57</td>
+					<td>STATE BANK OF INDIA</td>
+					<td>SBI RACC (FIMM) ANAND (62743) 2ND FLOOR SBI ANAND </td>
+					<td>OFC</td>
+					<td style="background-color:#bbb;">Trans_AND</td>
+					<td>SDOP_ANAND</td>
+					<td>4 MBPS</td>
+					<td>AGM TX Anand</td>
+					<td style="text-align:center;background-color:#bbb;">1 </td>
+					<td>Local SSA OFC break</td>					
+				</tr>
+					
+</table>
+
+</body>
+</html>

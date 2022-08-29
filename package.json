@@ -1,0 +1,36 @@
+{
+  "name": "4-nat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start:dev": "nodemon app.js",
+    "start:prod": "NODE_ENV=production nodemon app.js"
+  },
+  "author": "parth patel",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.8",
+    "express": "^4.17.2",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-rate-limit": "^6.2.1",
+    "helmet": "^3.23.3",
+    "hpp": "^0.2.3",
+    "jsonwebtoken": "^8.5.1",
+    "leaflet": "^1.8.0",
+    "mongoose": "^6.2.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "ndb": "^1.1.5",
+    "nodemailer": "^6.7.2",
+    "nodemon": "^2.0.16",
+    "pug": "^3.0.2",
+    "validator": "^13.7.0",
+    "xss-clean": "^0.1.1"
+  }
+}

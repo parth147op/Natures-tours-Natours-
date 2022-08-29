@@ -1,0 +1,202 @@
+<%-include('header')%>
+<section class="section-header">
+    <div class="header__hero">
+        <div class="header__hero-overlay">&nbsp;</div>
+        <img class="header__hero-img" src="/img/tours/<%=tour.imageCover%>" alt="<%=tour.name%>">
+    </div>
+      <div class="heading-box">
+        <h1 class="heading-primary">
+          <span
+            ><%=tour.name%></span
+          >
+        </h1>
+        <div class="heading-box__group">
+          <div class="heading-box__detail">
+            <svg class="heading-box__icon">
+              <use xlink:href="/img/icons.svg#icon-clock"></use>
+            </svg>
+            <span class="heading-box__text"><%=tour.duration%> days</span>
+          </div>
+          <div class="heading-box__detail">
+            <svg class="heading-box__icon">
+              <use xlink:href="/img/icons.svg#icon-map-pin"></use>
+            </svg>
+            <span class="heading-box__text"><%=tour.startLocation.description%></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-description">
+      <div class="overview-box">
+        <div>
+          <div class="overview-box__group">
+            <h2 class="heading-secondary ma-bt-lg">Quick facts</h2>
+            <div class="overview-box__detail">
+              <svg class="overview-box__icon">
+                <use xlink:href="/img/icons.svg#icon-calendar"></use>
+              </svg>
+              <span class="overview-box__label">Next date</span>
+              <span class="overview-box__text">August 2021</span>
+            </div>
+            <div class="overview-box__detail">
+              <svg class="overview-box__icon">
+                <use xlink:href="/img/icons.svg#icon-trending-up"></use>
+              </svg>
+              <span class="overview-box__label">Difficulty</span>
+              <span class="overview-box__text"><%=tour.difficulty%></span>
+            </div>
+            <div class="overview-box__detail">
+              <svg class="overview-box__icon">
+                <use xlink:href="/img/icons.svg#icon-user"></use>
+              </svg>
+              <span class="overview-box__label">Participants</span>
+              <span class="overview-box__text"><%=tour.maxGroupSize%> people</span>
+            </div>
+            <div class="overview-box__detail">
+              <svg class="overview-box__icon">
+                <use xlink:href="/img/icons.svg#icon-star"></use>
+              </svg>
+              <span class="overview-box__label">Rating</span>
+              <span class="overview-box__text"><%=Math.round(tour.ratingsAverage*100)/100%> / 5</span>
+            </div>
+          </div>
+
+          <div class="overview-box__group">
+            <h2 class="heading-secondary ma-bt-lg">Your tour guides</h2><br>
+            <span class="overview-box__label">Lead guide</span><br>
+            <%for(let guide of tour.guides){%>
+            <%if(guide.role=='lead-guide'){%>
+            <div class="overview-box__detail">
+              <img
+                src="/img/users/<%=guide.photo%>"
+                alt="Lead guide"
+                class="overview-box__img"
+              />
+            
+              <span class="overview-box__text"><%=guide.name%></span>
+              <%}}%>
+
+            </div>
+            <span class="overview-box__label">Tour guide</span>
+
+            <%for(let guide of tour.guides){%>
+            <%if(guide.role=='guide'){%>
+            <div class="overview-box__detail">
+              <img
+                src="/img/users/<%=guide.photo%>"
+                alt="Tour guide"
+                class="overview-box__img"
+              />
+              
+              <span class="overview-box__text"><%=guide.name%></span>
+              <%}}%>
+            </div>
+            <%for(let guide of tour.guides){%>
+            <%if(guide.role=='intern'){%>
+                <span class="overview-box__label">Intern</span>
+            <div class="overview-box__detail">
+              <img
+                src="/img/users/<%=guide.photo%>"
+                alt="Intern"
+                class="overview-box__img"
+              />
+              <span class="overview-box__text"><%=guide.name%></span>
+              <%}}%>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="description-box">
+        <h2 class="heading-secondary ma-bt-lg">About <%=tour.name%></h2>
+        <p class="description__text">
+          <%=tour.description%>
+        </p>
+      </div>
+    </section>
+
+    <section class="section-pictures">
+        <%for(let images of tour.images){%>
+      <div class="picture-box">
+        <img
+          class="picture-box__img picture-box__img--1"
+          src="/img/tours/<%=images%>"
+          alt="The Park Camper Tour 1"
+        />
+      </div>
+        <%}%>
+    </section>
+    <section class="section-map">
+      <div id="map" data-locations="<%=JSON.stringify(tour.locations)%>"></div>
+    </section> 
+    <section class="section-reviews">
+      <div class="reviews">
+          <%for(let review of tour.reviews){%>
+        <div class="reviews__card">
+          <div class="reviews__avatar">
+            <img
+              src="/img/users/<%=review.user.photo%>"
+              alt="<%=review.user.name%>"
+              class="reviews__avatar-img"
+            />
+            <h6 class="reviews__user"><%=review.user.name%></h6>
+          </div>
+          <p class="reviews__text">
+            <%=review.review%>
+          </p>
+          <div class="reviews__rating">
+              <%for(star in [1,2,3,4,5]){%>
+            <svg class="reviews__star reviews__star--<%if(review.rating>=star){%>active<%}else{%>inactive<%}%>">
+              <use xlink:href="/img/icons.svg#icon-star"></use>
+            </svg>
+              <%}%>
+          </div>
+        </div>
+        <%}%>
+      </div>
+    </section>
+
+    <section class="section-cta">
+      <div class="cta">
+        <div class="cta__img cta__img--logo">
+          <img src="/img/logo-white.png" alt="Natours logo" class="" />
+        </div>
+        <img src="/img/tours/tour-5-2.jpg" alt="" class="cta__img cta__img--1" />
+        <img src="/img/tours/tour-5-1.jpg" alt="" class="cta__img cta__img--2" />
+
+        <div class="cta__content">
+          <h2 class="heading-secondary">What are you waiting for?</h2>
+          <p class="cta__text">
+            10 days. 1 adventure. Infinite memories. Make it yours today!
+          </p>
+          <button class="btn btn--green span-all-rows">Book tour now!</button>
+        </div>
+      </div>
+    </section>
+    <script>
+        const data = JSON.parse(document.getElementById('map').dataset.locations);
+        //for(let location in )
+        const map = L.map('map').setView([data[0].coordinates[1],data[0].coordinates[0]],7);
+        const titleUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+        const attribution ='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
+        const title = L.tileLayer(titleUrl,{attribution});
+        title.addTo(map);
+        for(let location of data){
+            const CLayer = L.marker([location.coordinates[1],location.coordinates[0]],{radius:10000,color:'coral',fillColor:'blue',fillOpacity:0.5});
+            CLayer.bindPopup('<h2>'+location.description+','+location.day +' days </h2>');
+            CLayer.addTo(map);
+        } 
+        const latling = [];
+        for(let location of data){
+            latling.push([location.coordinates[1],location.coordinates[0]]);
+        }
+        console.log(latling);
+        const polyline = L.polyline(latling);
+        polyline.addTo(map);
+
+    </script>
+    <%- include('footer')%>
+    
+    
+
