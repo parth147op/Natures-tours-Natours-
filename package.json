@@ -4,9 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    
-    "start:dev": "nodemon app.js",
-    "start:prod": "NODE_ENV=production nodemon app.js"
+
+    "start:dev": "node app.js",
+    "start:prod": "nodemon app.js"
   },
   "author": "parth patel",
   "license": "ISC",

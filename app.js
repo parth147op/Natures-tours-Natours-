@@ -27,7 +27,7 @@ const hpp = require('hpp');
 dotenv.config({path:'./config.env'});
 
 app.use(cors({
-    origin:'localhost:3000',
+    origin:`http://localhost:${process.env.PORT}`,
 }))
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
@@ -86,7 +86,7 @@ app.use('/api/v1/tours',tourRoutes);
 app.use('/api/v1/users',userRoutes);
 app.use('/api/v1/reviews',reviewRoutes);
 
-const port = process.env.PORT||5000;
+const port = process.env.PORT||3000;
 var DB = process.env.DATABASE.replace('<username>',process.env.DATABASE_USERNAME);
 DB=DB.replace('<password>',process.env.DATABASE_PASSWORD);
 mongoose.connect(DB).then(()=>console.log(`DB connection successfull!!!`));
