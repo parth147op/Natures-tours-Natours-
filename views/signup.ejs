@@ -41,6 +41,7 @@
           })
           console.log(res);
           if(res.data.status=='success'){
+            alert(`Welcome ${name}!!!`);
             location.assign('/');
           }
           }catch(err){

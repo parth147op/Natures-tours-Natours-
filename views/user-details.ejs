@@ -157,11 +157,12 @@
     //      updatePhoto(photo,'data');
     //  });
      const updatedetails = async(data)=>{
+        const baseURL = window.location.origin;
          console.log(data);
          try{
             const res = await axios({
                 method:'PATCH',
-                url:'http://localhost:3000/api/v1/users/user/me',
+                url:`${baseURL}/api/v1/users/user/me`,
                 data
             })
             if(res.data.status=='success'){
@@ -184,9 +185,10 @@
 
      const updatePassword = async(data)=>{
          try{
+            const baseURL = window.location.origin;
             const res = await axios({
                 method:'PATCH',
-                url:'http://localhost:3000/api/v1/users/user/updateMyPassword',
+                url:`${baseURL}/api/v1/users/user/updateMyPassword`,
                 data
             })
             if(res.data.status=='success'){
