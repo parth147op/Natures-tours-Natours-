@@ -17,15 +17,16 @@
         </form>
     </div>
   </main> 
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script>
       const login = async(email,password)=>{
+        const baseURL = window.location.origin;
+
           try{
             console.log(email,password);
             const res = await axios({
               method:'POST',
-              url:'http://localhost:3000/api/v1/users/login',
+              url:`${baseURL}/api/v1/users/login`,
               data:{
                   email,
                   password
