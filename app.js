@@ -85,6 +85,7 @@ app.use('/',viewsRoutes);
 app.use('/api/v1/tours',tourRoutes);
 app.use('/api/v1/users',userRoutes);
 app.use('/api/v1/reviews',reviewRoutes);
+
 const port = process.env.PORT||5000;
 var DB = process.env.DATABASE.replace('<username>',process.env.DATABASE_USERNAME);
 DB=DB.replace('<password>',process.env.DATABASE_PASSWORD);
@@ -92,4 +93,5 @@ mongoose.connect(DB).then(()=>console.log(`DB connection successfull!!!`));
 app.listen(port,()=>{
     console.log(`App running on port:${port}`);
 });
+
 //module.exports = app;

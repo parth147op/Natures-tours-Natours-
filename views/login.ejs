@@ -36,8 +36,16 @@
             location.assign('/');
           }
           }catch(err){
-              //console.log(err.response.data.message);
-              alert(err.response.data.message);
+              if(err.response.data.message=="Email doesn't exist!!"){
+                alert("Email doesn't exist!");
+              }
+              else if(err.response.data.message=="Incorrect password!"){
+                alert("Incorrect password!");
+              }
+              else{
+                alert("Something when wrong...Please try again");
+              }
+              
           }
       }
       document.querySelector('.form').addEventListener('submit',e=>{

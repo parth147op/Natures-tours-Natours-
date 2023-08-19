@@ -16,6 +16,7 @@ const sendCookie = (token, res) => {
     httpOnly: true,
   });
 };
+
 exports.signup = async (req, res, next) => {
   try {
     const newUser = await User.create({
@@ -55,13 +56,19 @@ exports.login = async (req, res, next) => {
     }
     const user = await User.findOne({ email: email }).select("+password");
     console.log(user);
-    const token = signToken(user._id);
-    if (!user || !(await user.correctPassword(password, user.password))) {
-      return res.status(400).json({
+    if (!user) {
+      return res.status(404).json({
         status: `fail`,
-        message: "Incorrect email and password!",
+        message: "Email doesn't exist!!",
       });
     }
+    if(!(await user.correctPassword(password,user.password))){
+      return res.status(400).json({
+        status: `fail`,
+        message: "Incorrect password!!",
+      })
+    }
+    const token = signToken(user._id);
     sendCookie(token, res);
     res.status(201).json({
       status: "success",
@@ -73,7 +80,7 @@ exports.login = async (req, res, next) => {
   } catch (err) {
     res.status(400).json({
       status: `fail`,
-      message: err,
+      message: "Something went wrong. Please try again.",
     });
   }
 };

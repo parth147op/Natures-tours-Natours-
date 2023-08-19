@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    
     "start:dev": "nodemon app.js",
     "start:prod": "NODE_ENV=production nodemon app.js"
   },
@@ -28,7 +29,7 @@
     "multer": "^1.4.5-lts.1",
     "ndb": "^1.1.5",
     "nodemailer": "^6.7.2",
-    "nodemon": "^2.0.16",
+    "nodemon": "^2.0.22",
     "pug": "^3.0.2",
     "validator": "^13.7.0",
     "xss-clean": "^0.1.1"
